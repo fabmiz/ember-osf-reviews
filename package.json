@@ -17,7 +17,7 @@
     "test:cover": "COVERAGE=true yarn test"
   },
   "devDependencies": {
-    "@centerforopenscience/ember-osf": "https://github.com/CenterForOpenScience/ember-osf#feature/reviews#2017-12-21",
+    "@centerforopenscience/ember-osf": "https://github.com/CenterForOpenScience/ember-osf#df7716240c43af4ef42a191985436279e6e510ec",
     "@centerforopenscience/eslint-config": "^2.0.0",
     "@cos-forks/ember-content-placeholders": "https://github.com/cos-forks/ember-content-placeholders#c85cdbeb4b9c206c3f76a92422db76815b2c95bc",
     "broccoli-asset-rev": "^2.4.5",
