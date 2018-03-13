@@ -54,9 +54,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@centerforopenscience/ember-osf@https://github.com/CenterForOpenScience/ember-osf#df7716240c43af4ef42a191985436279e6e510ec":
-  version "0.14.0"
-  resolved "https://github.com/CenterForOpenScience/ember-osf#df7716240c43af4ef42a191985436279e6e510ec"
+"@centerforopenscience/ember-osf@https://github.com/CenterForOpenScience/ember-osf.git#release/next-interfaces#2018-03-13T16:24:10Z":
+  version "0.15.0"
+  resolved "https://github.com/CenterForOpenScience/ember-osf.git#2e2474efe16883405116ff1d140cc49c10d09fa8"
   dependencies:
     bootstrap-sass "^3.3.7"
     broccoli-funnel "1.2.0"
@@ -72,6 +72,7 @@
     ember-cli-sass "^6.2.0"
     ember-cli-shims "1.0.2"
     ember-collapsible-panel "^2.1.1"
+    ember-concurrency "^0.8.12"
     ember-cp-validations "^3.5.0"
     ember-diff-attrs "^0.2.0"
     ember-get-config "0.2.1"
