@@ -1,7 +1,6 @@
 import { filterBy } from '@ember/object/computed';
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-
 import { task } from 'ember-concurrency';
 
 
@@ -9,9 +8,8 @@ export default Component.extend({
     store: service(),
 
     tagName: 'ul',
-    node: null,
 
-    bibliographicContributors: filterBy('contributorsList', 'bibliographic', true),
+    bibliographicContributors: filterBy('model.contributors', 'bibliographic', true),
 
     didReceiveAttrs() {
         this.set('contributorsList', this.get('contributors') || []);
