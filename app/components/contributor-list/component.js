@@ -9,7 +9,7 @@ export default Component.extend({
 
     tagName: 'ul',
 
-    bibliographicContributors: filterBy('model.contributors', 'bibliographic', true),
+    bibliographicContributors: filterBy('contributorsList', 'bibliographic', true),
 
     didReceiveAttrs() {
         this.set('contributorsList', this.get('contributors') || []);
@@ -19,22 +19,22 @@ export default Component.extend({
     },
 
     fetchData: task(function* () {
-        const node = this.get('node.content');
+        const submission = this.get('submission.content');
         const query = {
             'page[size]': 100,
             page: 1,
         };
 
-        let response = yield this.get('loadContributors').perform(node, query);
+        let response = yield this.get('loadContributors').perform(submission, query);
 
         while (response.links.next) {
             query.page++;
-            response = yield this.get('loadContributors').perform(node, query);
+            response = yield this.get('loadContributors').perform(submission, query);
         }
     }),
 
-    loadContributors: task(function* (node, query) {
-        const results = yield node.queryHasMany('contributors', query);
+    loadContributors: task(function* (submission, query) {
+        const results = yield submission.queryHasMany('contributors', query);
         this.get('contributorsList').pushObjects(results.toArray());
         return results;
     }),

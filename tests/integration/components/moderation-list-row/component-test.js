@@ -25,9 +25,7 @@ test('it renders moderation-list-row accepted with reviewActions', function(asse
             }),
         ],
         reviewsState: 'accepted',
-        node: EmberObject.create({
-            contributors: [{ users: { fullName: 'Viper' } }, { users: { fullName: 'Oogway' } }],
-        }),
+        contributors: [{ users: { fullName: 'Viper' } }, { users: { fullName: 'Oogway' } }],
     });
     this.render(hbs`{{moderation-list-row submission=submission}}`);
     assert.ok(this.$('[data-status=accepted]').length);
@@ -44,9 +42,7 @@ test('it renders moderation-list-row accepted without reviewActions', function(a
         dateLastTransitioned: '2017-10-28T19:14:27.816946Z',
         reviewActions: [],
         reviewsState: 'accepted',
-        node: EmberObject.create({
-            contributors: [{ users: { fullName: 'Viper' } }],
-        }),
+        contributors: [{ users: { fullName: 'Viper' } }],
     });
     this.render(hbs`{{moderation-list-row submission=submission}}`);
     assert.equal(this.$('[data-status=accepted]').text().replace(/\s+/g, ' ').trim(), 'Submitted on October 27, 2017 by Viper' +
@@ -72,9 +68,7 @@ test('it renders moderation-list-row rejected with reviewActions', function(asse
             }),
         ],
         reviewsState: 'rejected',
-        node: EmberObject.create({
-            contributors: [{ users: { fullName: 'Mr. Ping' } }],
-        }),
+        contributors: [{ users: { fullName: 'Mr. Ping' } }],
     });
     this.render(hbs`{{moderation-list-row submission=submission}}`);
     assert.equal(this.$('[data-status=rejected]').text().replace(/\s+/g, ' ').trim(), 'Submitted on October 27, 2017 by Mr. Ping ' +

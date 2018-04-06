@@ -70,7 +70,7 @@ test('baseServiceUrl computed property', function (assert) {
         domain: 'pandaXriv.com',
     });
     service.setProperties({ provider });
-    assert.strictEqual(service.get('baseServiceUrl'), 'pandaXriv.com');
+    assert.strictEqual(service.get('baseServiceUrl'), 'pandaXriv.com/');
 
     service.set('provider.domain', '');
     assert.strictEqual(service.get('baseServiceUrl'), '/preprints/pandaXriv/');

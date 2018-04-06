@@ -93,6 +93,6 @@ export default Component.extend({
 
     fetchData: task(function* () {
         yield this.get('submission.contributors');
-        yield this.get('submission.actions');
+        yield this.get('submission.reviewActions');
     }),
 });

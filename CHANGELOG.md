@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ember-cli-moment-shim version to `^3.5.3` due to security issues found in `moment` versions before `2.19.3`
 - reviews to use ember-osf version of `queryHasMany`
 
+## Removed
+- Unneeded node calls to reflect divorce changes
+
 ## [0.4.1] - 2018-03-06
 ## Fixed
 - Updating of decisions immediately after accepting or rejecting
